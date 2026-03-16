@@ -11,7 +11,9 @@
     "forgotPassword": "Forgot password?",
     "submit": "Sign in",
     "loading": "Signing in...",
-    "error": "Invalid email or password"
+    "error": "Invalid email or password",
+    "noAccount": "Don't have an account?",
+    "registerLink": "Sign up"
   },
   "forgotPassword": {
     "subtitle": "Reset your password",
@@ -39,5 +41,25 @@
     "regles": "Rules",
     "profile": "Profile",
     "logout": "Sign out"
+  },
+    "register": {
+    "subtitle": "Create your My RP Pal account",
+    "username": "Username",
+    "usernamePlaceholder": "john_doe",
+    "pseudo": "Nickname",
+    "pseudoPlaceholder": "The Grey Wanderer",
+    "pseudoHint": "Your display name in the community",
+    "confirmPassword": "Confirm password",
+    "passwordPrompt": "Enter a password",
+    "passwordWeak": "Weak",
+    "passwordMedium": "Medium",
+    "passwordStrong": "Strong",
+    "submit": "Create account",
+    "loading": "Creating...",
+    "alreadyAccount": "Already have an account?",
+    "loginLink": "Sign in",
+    "error": "Something went wrong during registration.",
+    "errorMatch": "Passwords do not match.",
+    "errorLength": "Password must be at least 8 characters."
   }
 }

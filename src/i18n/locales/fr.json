@@ -11,7 +11,9 @@
     "forgotPassword": "Mot de passe oublié ?",
     "submit": "Se connecter",
     "loading": "Connexion...",
-    "error": "Email ou mot de passe incorrect"
+    "error": "Email ou mot de passe incorrect",
+    "noAccount": "Pas encore de compte ?",
+    "registerLink": "S'inscrire"
   },
   "forgotPassword": {
     "subtitle": "Réinitialise ton mot de passe",
@@ -39,5 +41,25 @@
     "regles": "Règles",
     "profile": "Profil",
     "logout": "Se déconnecter"
+  },
+  "register": {
+    "subtitle": "Crée ton compte My RP Pal",
+    "username": "Nom d'utilisateur",
+    "usernamePlaceholder": "john_doe",
+    "pseudo": "Pseudo",
+    "pseudoPlaceholder": "Le Rôdeur des Terres Grises",
+    "pseudoHint": "Ton nom affiché dans la communauté",
+    "confirmPassword": "Confirmer le mot de passe",
+    "passwordPrompt": "Saisis un mot de passe",
+    "passwordWeak": "Faible",
+    "passwordMedium": "Moyen",
+    "passwordStrong": "Fort",
+    "submit": "Créer mon compte",
+    "loading": "Création...",
+    "alreadyAccount": "Tu as déjà un compte ?",
+    "loginLink": "Se connecter",
+    "error": "Une erreur est survenue lors de l'inscription.",
+    "errorMatch": "Les mots de passe ne correspondent pas.",
+    "errorLength": "Le mot de passe doit contenir au moins 8 caractères."
   }
 }

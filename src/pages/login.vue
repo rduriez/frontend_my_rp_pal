@@ -107,6 +107,12 @@ async function handleLogin() {
 
         </form>
       </div>
+        <p class="mt-6 text-center text-sm text-surface-500">
+        {{ t('auth.noAccount') }}
+        <RouterLink to="/register" class="text-primary hover:underline font-medium">
+          {{ t('auth.registerLink') }}
+        </RouterLink>
+      </p>
     </div>
   </div>
 </template>

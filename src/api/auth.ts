@@ -27,3 +27,22 @@ export async function fetchLogin(email: string, password: string) {
 
   return response.json() as Promise<{ access_token: string; refresh_token: string }>
 }
+
+export async function fetchRegister(
+  username: string,
+  email: string,
+  pseudo: string,
+  password: string
+) {
+  const response = await fetch(`${BASE_URL}/auth/register`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ username, email, pseudo, password }),
+  })
+
+  if (!response.ok) {
+    throw new Error('Erreur lors de l\'inscription')
+  }
+
+  return response.json() as Promise<{ access_token: string; refresh_token: string }>
+}
