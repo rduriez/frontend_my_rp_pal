@@ -1,0 +1,43 @@
+{
+  "app": {
+    "name": "My RP Pal"
+  },
+  "auth": {
+    "subtitle": "Accède à ta bibliothèque de règles",
+    "email": "Adresse email",
+    "emailPlaceholder": "toi@exemple.fr",
+    "password": "Mot de passe",
+    "passwordPlaceholder": "••••••••",
+    "forgotPassword": "Mot de passe oublié ?",
+    "submit": "Se connecter",
+    "loading": "Connexion...",
+    "error": "Email ou mot de passe incorrect"
+  },
+  "forgotPassword": {
+    "subtitle": "Réinitialise ton mot de passe",
+    "emailTitle": "Retrouve ton compte",
+    "emailHint": "Saisis ton adresse email pour continuer.",
+    "emailSubmit": "Continuer",
+    "passwordTitle": "Nouveau mot de passe",
+    "passwordHint": "Choisis un nouveau mot de passe pour {email}.",
+    "newPassword": "Nouveau mot de passe",
+    "confirmPassword": "Confirmer le mot de passe",
+    "passwordSubmit": "Réinitialiser",
+    "loading": "Chargement...",
+    "successTitle": "Mot de passe mis à jour !",
+    "successHint": "Tu peux maintenant te connecter avec ton nouveau mot de passe.",
+    "backToLogin": "Retour à la connexion",
+    "errorEmail": "Aucun compte trouvé pour cet email.",
+    "errorMatch": "Les mots de passe ne correspondent pas.",
+    "errorLength": "Le mot de passe doit contenir au moins 8 caractères.",
+    "errorReset": "Une erreur est survenue, réessaie."
+  },
+    "nav": {
+    "home": "Accueil",
+    "systemes": "Systèmes JDR",
+    "sorts": "Sorts & compétences",
+    "regles": "Règles",
+    "profile": "Profil",
+    "logout": "Se déconnecter"
+  }
+}

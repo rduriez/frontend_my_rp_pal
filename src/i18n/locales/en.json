@@ -1,0 +1,43 @@
+{
+  "app": {
+    "name": "My RP Pal"
+  },
+  "auth": {
+    "subtitle": "Access your rulebook library",
+    "email": "Email address",
+    "emailPlaceholder": "you@example.com",
+    "password": "Password",
+    "passwordPlaceholder": "••••••••",
+    "forgotPassword": "Forgot password?",
+    "submit": "Sign in",
+    "loading": "Signing in...",
+    "error": "Invalid email or password"
+  },
+  "forgotPassword": {
+    "subtitle": "Reset your password",
+    "emailTitle": "Find your account",
+    "emailHint": "Enter your email address to continue.",
+    "emailSubmit": "Continue",
+    "passwordTitle": "New password",
+    "passwordHint": "Choose a new password for {email}.",
+    "newPassword": "New password",
+    "confirmPassword": "Confirm password",
+    "passwordSubmit": "Reset password",
+    "loading": "Loading...",
+    "successTitle": "Password updated!",
+    "successHint": "You can now sign in with your new password.",
+    "backToLogin": "Back to sign in",
+    "errorEmail": "No account found for this email.",
+    "errorMatch": "Passwords do not match.",
+    "errorLength": "Password must be at least 8 characters.",
+    "errorReset": "Something went wrong, please try again."
+  },
+  "nav": {
+    "home": "Home",
+    "systemes": "RPG Systems",
+    "sorts": "Spells & skills",
+    "regles": "Rules",
+    "profile": "Profile",
+    "logout": "Sign out"
+  }
+}
