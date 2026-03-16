@@ -5,7 +5,7 @@ import DefaultLayout from '@/layouts/default.vue'
 
 const route = useRoute()
 
-const noLayoutRoutes = ['/login', '/forgot-password', '/register']
+const noLayoutRoutes = ['/login', '/register', '/forgot-password']
 
 const useLayout = computed(() =>
   noLayoutRoutes.includes(route.path) ? null : DefaultLayout

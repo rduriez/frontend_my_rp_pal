@@ -13,16 +13,6 @@ const navItems = [
     to: '/systemes',
     icon: 'pi pi-book',
   },
-  {
-    key: 'sorts',
-    to: '/sorts',
-    icon: 'pi pi-star',
-  },
-  {
-    key: 'regles',
-    to: '/regles',
-    icon: 'pi pi-list',
-  },
 ]
 </script>
 
@@ -69,11 +59,11 @@ const navItems = [
           @click="$router.push('/profil')"
         >
           <Avatar
-            :label="auth.user?.username?.charAt(0).toUpperCase() ?? '?'"
+            :label="auth.user?.pseudo?.charAt(0).toUpperCase() ?? '?'"
             shape="circle"
             size="small"
           />
-          <span class="truncate">{{ auth.user?.username ?? t('nav.profile') }}</span>
+          <span class="truncate">{{ auth.user?.pseudo ?? t('nav.profile') }}</span>
         </Button>
       </RouterLink>
 

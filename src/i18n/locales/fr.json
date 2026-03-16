@@ -44,8 +44,10 @@
   },
   "register": {
     "subtitle": "Crée ton compte My RP Pal",
-    "username": "Nom d'utilisateur",
-    "usernamePlaceholder": "john_doe",
+    "firstName": "Prénom",
+    "firstNamePlaceholder": "Jean",
+    "lastName": "Nom",
+    "lastNamePlaceholder": "Dupont",
     "pseudo": "Pseudo",
     "pseudoPlaceholder": "Le Rôdeur des Terres Grises",
     "pseudoHint": "Ton nom affiché dans la communauté",

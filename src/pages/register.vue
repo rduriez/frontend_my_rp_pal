@@ -12,7 +12,8 @@ const { t } = useI18n()
 const router = useRouter()
 const auth = useAuthStore()
 
-const username = ref('')
+const firstName = ref('')
+const lastName = ref('')
 const email = ref('')
 const pseudo = ref('')
 const password = ref('')
@@ -35,7 +36,7 @@ async function handleRegister() {
 
   loading.value = true
   try {
-    await auth.register(username.value, email.value, pseudo.value, password.value)
+    await auth.register({firstName: firstName.value, lastName: lastName.value,mail: email.value,pseudo: pseudo.value,password: password.value})
     router.push('/')
   } catch {
     error.value = t('register.error')
@@ -68,19 +69,32 @@ async function handleRegister() {
 
         <form class="space-y-5" @submit.prevent="handleRegister">
 
-          <!-- Nom d'utilisateur -->
-          <div class="flex flex-col gap-1.5">
-            <label for="username" class="text-sm font-medium text-surface-700 dark:text-surface-300">
-              {{ t('register.username') }}
-            </label>
-            <InputText
-              id="username"
-              v-model="username"
-              required
-              :placeholder="t('register.usernamePlaceholder')"
-              class="w-full"
-            />
-          </div>
+        <div class="flex flex-col gap-1.5">
+        <label for="firstName" class="text-sm font-medium text-surface-700 dark:text-surface-300">
+            {{ t('register.firstName') }}
+        </label>
+        <InputText
+            id="firstName"
+            v-model="firstName"
+            required
+            :placeholder="t('register.firstNamePlaceholder')"
+            class="w-full"
+        />
+        </div>
+
+        <!-- Nom -->
+        <div class="flex flex-col gap-1.5">
+        <label for="lastName" class="text-sm font-medium text-surface-700 dark:text-surface-300">
+            {{ t('register.lastName') }}
+        </label>
+        <InputText
+            id="lastName"
+            v-model="lastName"
+            required
+            :placeholder="t('register.lastNamePlaceholder')"
+            class="w-full"
+        />
+        </div>
 
           <!-- Pseudo -->
           <div class="flex flex-col gap-1.5">

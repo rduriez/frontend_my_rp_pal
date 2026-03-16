@@ -1,6 +1,8 @@
 const BASE_URL = import.meta.env.VITE_API_URL
+import type { LoginRequest, RegisterRequest, AuthTokens, UserResponse } from './types/auth'
 
-export async function fetchRefresh(refreshToken: string) {
+
+export async function fetchRefresh(refreshToken: string): Promise<AuthTokens> {
   const response = await fetch(`${BASE_URL}/auth/refresh`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -11,38 +13,25 @@ export async function fetchRefresh(refreshToken: string) {
     throw new Error("Refresh token invalide")
   }
 
-  return response.json() as Promise<{ access_token: string; refresh_token: string }>
+  return response.json()
 }
 
-export async function fetchLogin(email: string, password: string) {
+export async function fetchLogin(payload: LoginRequest): Promise<AuthTokens> {
   const response = await fetch(`${BASE_URL}/auth/login`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ email, password }),
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload),
   })
-
-  if (!response.ok) {
-    throw new Error("Identifiants invalides")
-  }
-
-  return response.json() as Promise<{ access_token: string; refresh_token: string }>
+  if (!response.ok) throw new Error('Identifiants invalides')
+  return response.json()
 }
 
-export async function fetchRegister(
-  username: string,
-  email: string,
-  pseudo: string,
-  password: string
-) {
+export async function fetchRegister(payload: RegisterRequest): Promise<UserResponse> {
   const response = await fetch(`${BASE_URL}/auth/register`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ username, email, pseudo, password }),
+    body: JSON.stringify(payload),
   })
-
-  if (!response.ok) {
-    throw new Error('Erreur lors de l\'inscription')
-  }
-
-  return response.json() as Promise<{ access_token: string; refresh_token: string }>
+  if (!response.ok) throw new Error('Erreur lors de l\'inscription')
+  return response.json()
 }

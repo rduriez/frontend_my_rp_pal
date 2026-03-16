@@ -44,8 +44,10 @@
   },
     "register": {
     "subtitle": "Create your My RP Pal account",
-    "username": "Username",
-    "usernamePlaceholder": "john_doe",
+    "firstName": "First name",
+    "firstNamePlaceholder": "John",
+    "lastName": "Last name",
+    "lastNamePlaceholder": "Doe",
     "pseudo": "Nickname",
     "pseudoPlaceholder": "The Grey Wanderer",
     "pseudoHint": "Your display name in the community",
