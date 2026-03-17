@@ -50,7 +50,7 @@ async function handleLogout() {
           :icon="item.icon"
           :severity="isActive ? 'primary' : 'secondary'"
           :text="!isActive"
-          class="w-full !justify-start"
+          class="w-full justify-start!"
           @click="$router.push(item.to)"
         />
       </RouterLink>
@@ -61,7 +61,7 @@ async function handleLogout() {
         <Button
           :severity="isActive ? 'primary' : 'secondary'"
           :text="!isActive"
-          class="w-full !justify-start gap-3"
+          class="w-full justify-start! gap-3"
           @click="$router.push('/profil')"
         >
           <Avatar
@@ -78,7 +78,7 @@ async function handleLogout() {
         icon="pi pi-sign-out"
         severity="danger"
         text
-        class="w-full !justify-start"
+        class="w-full justify-start!"
         @click="handleLogout"
       />
     </div>

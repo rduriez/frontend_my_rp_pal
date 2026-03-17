@@ -2,6 +2,10 @@
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import DefaultLayout from '@/layouts/default.vue'
+import { useAuthStore } from '@/stores/auth'
+
+const authStore = useAuthStore()
+authStore.init()
 
 const route = useRoute()
 

@@ -35,3 +35,11 @@ export async function fetchRegister(payload: RegisterRequest): Promise<UserRespo
   if (!response.ok) throw new Error('Erreur lors de l\'inscription')
   return response.json()
 }
+
+export async function fetchMe(accessToken: string): Promise<UserResponse> {
+  const response = await fetch(`${BASE_URL}/users/me`, {
+    headers: { Authorization: `Bearer ${accessToken}` },
+  })
+  if (!response.ok) throw new Error('Utilisateur introuvable')
+  return response.json()
+}

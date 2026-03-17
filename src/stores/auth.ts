@@ -1,6 +1,7 @@
 import { defineStore } from 'pinia'
 import { ref, computed } from 'vue'
 import { fetchLogin, fetchRefresh, fetchRegister } from '@/api/auth'
+import { fetchMe } from '@/api/user'
 import type { AuthTokens, UserResponse, LoginRequest, RegisterRequest } from '@/api/types/auth'
 
 export const useAuthStore = defineStore('auth', () => {
@@ -13,6 +14,7 @@ export const useAuthStore = defineStore('auth', () => {
   async function login(payload: LoginRequest) {
     const data = await fetchLogin(payload)
     setTokens(data)
+    await loadMe()
   }
 
   async function register(payload: RegisterRequest) {
@@ -41,5 +43,16 @@ export const useAuthStore = defineStore('auth', () => {
     localStorage.removeItem('refresh_token')
   }
 
-  return { accessToken, refreshToken, user, isAuthenticated, login, logout, refresh, register }
+  async function loadMe() {
+      if (!accessToken.value) return
+      user.value = await fetchMe(accessToken.value)
+    }
+
+    async function init() {
+      if (accessToken.value) {
+        await loadMe()
+      }
+    }
+
+  return { accessToken, refreshToken, user, isAuthenticated, login, logout, refresh, register, init }
 })
