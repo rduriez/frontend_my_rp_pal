@@ -50,7 +50,6 @@ async function handleRegister() {
   <div class="min-h-screen flex items-center justify-center bg-surface-50 dark:bg-surface-900 px-4">
     <div class="w-full max-w-md">
 
-      <!-- Titre -->
       <div class="text-center mb-8">
         <h1 class="text-3xl font-bold text-surface-900 dark:text-surface-0">
           {{ t('app.name') }}
@@ -60,7 +59,6 @@ async function handleRegister() {
         </p>
       </div>
 
-      <!-- Card -->
       <div class="bg-surface-0 dark:bg-surface-800 rounded-2xl border border-surface-200 dark:border-surface-700 p-8">
 
         <Message v-if="error" severity="error" :closable="false" class="mb-6">
@@ -82,7 +80,6 @@ async function handleRegister() {
         />
         </div>
 
-        <!-- Nom -->
         <div class="flex flex-col gap-1.5">
         <label for="lastName" class="text-sm font-medium text-surface-700 dark:text-surface-300">
             {{ t('register.lastName') }}
@@ -96,7 +93,6 @@ async function handleRegister() {
         />
         </div>
 
-          <!-- Pseudo -->
           <div class="flex flex-col gap-1.5">
             <label for="pseudo" class="text-sm font-medium text-surface-700 dark:text-surface-300">
               {{ t('register.pseudo') }}
@@ -113,7 +109,6 @@ async function handleRegister() {
             </small>
           </div>
 
-          <!-- Email -->
           <div class="flex flex-col gap-1.5">
             <label for="email" class="text-sm font-medium text-surface-700 dark:text-surface-300">
               {{ t('auth.email') }}
@@ -129,7 +124,6 @@ async function handleRegister() {
             />
           </div>
 
-          <!-- Mot de passe -->
           <div class="flex flex-col gap-1.5">
             <label for="password" class="text-sm font-medium text-surface-700 dark:text-surface-300">
               {{ t('auth.password') }}
@@ -149,7 +143,6 @@ async function handleRegister() {
             />
           </div>
 
-          <!-- Confirmation mot de passe -->
           <div class="flex flex-col gap-1.5">
             <label for="confirm-password" class="text-sm font-medium text-surface-700 dark:text-surface-300">
               {{ t('register.confirmPassword') }}
@@ -166,7 +159,6 @@ async function handleRegister() {
             />
           </div>
 
-          <!-- Submit -->
           <Button
             type="submit"
             :label="loading ? t('register.loading') : t('register.submit')"
@@ -177,7 +169,6 @@ async function handleRegister() {
         </form>
       </div>
 
-      <!-- Lien vers login -->
       <p class="mt-6 text-center text-sm text-surface-500">
         {{ t('register.alreadyAccount') }}
         <RouterLink to="/login" class="text-primary hover:underline font-medium">

@@ -14,12 +14,10 @@ function toggleLocale() {
 <template>
   <header class="h-16 flex items-center justify-between px-6 bg-surface-0 dark:bg-surface-900 border-b border-surface-200 dark:border-surface-700 fixed top-0 left-64 right-0 z-10">
 
-    <!-- Titre de page -->
     <span class="text-sm font-medium text-surface-900 dark:text-surface-0">
       <slot />
     </span>
 
-    <!-- Actions -->
     <div class="flex items-center gap-1">
       <Button
         :label="locale === 'fr' ? 'EN' : 'FR'"

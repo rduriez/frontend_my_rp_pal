@@ -35,7 +35,6 @@ async function handleLogin() {
   <div class="min-h-screen flex items-center justify-center bg-surface-50 dark:bg-surface-900 px-4">
     <div class="w-full max-w-md">
 
-      <!-- Titre -->
       <div class="text-center mb-8">
         <h1 class="text-3xl font-bold text-surface-900 dark:text-surface-0">
           {{ t('app.name') }}
@@ -45,7 +44,6 @@ async function handleLogin() {
         </p>
       </div>
 
-      <!-- Card -->
       <div class="bg-surface-0 dark:bg-surface-800 rounded-2xl border border-surface-200 dark:border-surface-700 p-8 space-y-5">
 
         <!-- Erreur -->

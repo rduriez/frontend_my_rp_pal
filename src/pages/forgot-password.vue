@@ -61,7 +61,6 @@ async function handlePasswordSubmit() {
   <div class="min-h-screen flex items-center justify-center bg-surface-50 dark:bg-surface-900 px-4">
     <div class="w-full max-w-md">
 
-      <!-- Titre -->
       <div class="text-center mb-8">
         <h1 class="text-3xl font-bold text-surface-900 dark:text-surface-0">
           {{ t('app.name') }}
@@ -71,10 +70,8 @@ async function handlePasswordSubmit() {
         </p>
       </div>
 
-      <!-- Card -->
       <div class="bg-surface-0 dark:bg-surface-800 rounded-2xl border border-surface-200 dark:border-surface-700 p-8">
 
-        <!-- Étape 1 — Email -->
         <template v-if="step === 'email'">
           <div class="mb-6">
             <h2 class="text-base font-medium text-surface-900 dark:text-surface-0">
@@ -114,7 +111,6 @@ async function handlePasswordSubmit() {
           </form>
         </template>
 
-        <!-- Étape 2 — Nouveau mot de passe -->
         <template v-else-if="step === 'password'">
           <div class="mb-6">
             <h2 class="text-base font-medium text-surface-900 dark:text-surface-0">
@@ -171,7 +167,6 @@ async function handlePasswordSubmit() {
           </form>
         </template>
 
-        <!-- Étape 3 — Succès -->
         <template v-else-if="step === 'success'">
           <div class="text-center space-y-4">
             <div class="w-12 h-12 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center mx-auto">
@@ -194,7 +189,6 @@ async function handlePasswordSubmit() {
 
       </div>
 
-      <!-- Retour login -->
       <div v-if="step !== 'success'" class="mt-6 text-center">
         <Button
           :label="t('forgotPassword.backToLogin')"

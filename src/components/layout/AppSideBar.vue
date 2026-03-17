@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 import { useAuthStore } from '@/stores/auth'
+import { useRouter } from 'vue-router'
 import Avatar from 'primevue/avatar'
 import Button from 'primevue/button'
 
@@ -14,12 +15,19 @@ const navItems = [
     icon: 'pi pi-book',
   },
 ]
+
+
+const router = useRouter()
+
+async function handleLogout() {
+  auth.logout()
+  await router.push('/login')
+}
 </script>
 
 <template>
   <aside class="flex flex-col w-64 h-screen bg-surface-0 dark:bg-surface-900 border-r border-surface-200 dark:border-surface-700 fixed left-0 top-0 z-20">
 
-    <!-- Logo -->
     <div class="h-16 flex items-center px-6 border-b border-surface-200 dark:border-surface-700 shrink-0">
       <RouterLink
         to="/"
@@ -29,7 +37,6 @@ const navItems = [
       </RouterLink>
     </div>
 
-    <!-- Navigation -->
     <nav class="flex-1 px-3 py-4 space-y-1 overflow-y-auto">
       <RouterLink
         v-for="item in navItems"
@@ -49,7 +56,6 @@ const navItems = [
       </RouterLink>
     </nav>
 
-    <!-- Profil + déconnexion -->
     <div class="px-3 py-4 border-t border-surface-200 dark:border-surface-700 shrink-0 space-y-1">
       <RouterLink to="/profil" v-slot="{ isActive }" custom>
         <Button
@@ -73,7 +79,7 @@ const navItems = [
         severity="danger"
         text
         class="w-full !justify-start"
-        @click="auth.logout"
+        @click="handleLogout"
       />
     </div>
 
